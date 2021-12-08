@@ -1,0 +1,62 @@
+\documentclass{beamer}
+\usepackage[ngerman]{babel}
+\usepackage{comment}
+\usepackage{nameref}
+
+\usetheme{Copenhagen}
+\usecolortheme{seahorse}
+
+
+
+\title{Entwicklung eines Moduls zur Umstellung von direkten Datenbankzugriffen zu einer gekapselten Datenbankkommunikation mit optionaler Simulationsmöglichkeit}
+\author{Frank Loleit}
+\institute{Fachinformatiker (Anwendungsentwicklung)}
+\titlegraphic{\includegraphics[scale=0.2]{argusLogo.png}}
+\date{\today}
+
+
+
+\defbeamertemplate*{footline}{infolines theme}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor%~~(\insertshortinstitute)
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}Argus Data Insights
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\setbeamercolor{block body}{bg=white}
+\setbeamercolor{block title}{bg=white, fg=blue}
+
+\makeatletter
+\newcommand*{\currentname}{\@currentlabelname}
+\makeatother
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+    \frametitle{Inhalt}
+    \tableofcontents
+\end{frame}
+
+\section{Einleitung}
+    \begin{frame}{\insertsectionnumber\space \currentname}
+        \begin{block}{Unternehmensprofil}
+               Argus digitalisiert Medieninhalte und bereitet sie digital für Kunden auf.
+        \end{block}
+       
+        
+    \end{frame}
+
+\end{document}
