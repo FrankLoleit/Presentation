@@ -3,7 +3,7 @@
 \usepackage{comment}
 \usepackage{nameref}
 
-\usetheme{Copenhagen}
+\usetheme{Warsaw}
 \usecolortheme{seahorse}
 
 
@@ -32,6 +32,8 @@
   \end{beamercolorbox}}%
   \vskip0pt%
 }
+
+\setbeamertemplate{blocks}[rounded][shadow=false]
 \setbeamercolor{block body}{bg=white}
 \setbeamercolor{block title}{bg=white, fg=blue}
 
@@ -40,6 +42,8 @@
 \makeatother
 
 \begin{document}
+
+
 
 \begin{frame}
 \titlepage
@@ -51,12 +55,50 @@
 \end{frame}
 
 \section{Einleitung}
-    \begin{frame}{\insertsectionnumber\space \currentname}
-        \begin{block}{Unternehmensprofil}
-               Argus digitalisiert Medieninhalte und bereitet sie digital für Kunden auf.
-        \end{block}
-       
+    \subsection{Herangehensweise und Ziele}
+    
+        \begin{frame}{Ausgangsüberlegung}
+            \begin{definition}{Customer Obsession}
+                    
+            \end{definition}
+        \end{frame}
         
-    \end{frame}
+        
+        
+        \begin{frame}{\insertsectionnumber\space \currentname}
+            \begin{figure}[htp]
+                \centering
+                \includegraphics[scale=0.23]{ArgusProfil.png}
+                \caption{Portfolio}
+                \label{fig:my_label}
+            \end{figure}
+        \end{frame}
+        
+    \subsection{Argus Data Insights}
+    
+        \begin{frame}{Unternehmensprofil von Argus}
+            \begin{figure}[htp]
+                \centering
+                \includegraphics[scale=0.23]{ArgusProfil.png}
+                \caption{Portfolio}
+                \label{fig:my_label}
+            \end{figure}
+        \end{frame}            
+        
+        \begin{frame}{\insertsectionnumber\space \currentname}
+            \begin{block}{Architektur}
+                Die Desktop-Applikation \glqq Arche\grqq{} stellt Funktionen zur Digitalisierung und Aufbereitung von Medien bereit.
+            \end{block}
+            \begin{block}{Datenbankkommunikation}
+                Um die Kommunikation zwischen .NET und SQL zu gewährleisten, stehen hartkodierte Queries in Persistence-Klassen bereit.
+            \end{block}
+        \end{frame}
+                
+            
+            
+            
+           
+            
+        
 
 \end{document}
