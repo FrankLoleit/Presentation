@@ -3,6 +3,7 @@
 \usepackage{comment}
 \usepackage{nameref}
 \usepackage[official]{eurosym}
+\usepackage{multicol}
 
 \usetheme{Warsaw}
 \usecolortheme{seahorse}
@@ -58,8 +59,10 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Inhalt}
-    \tableofcontents
+    \begin{multicols}{2}
+        \frametitle{Inhalt}
+        \tableofcontents
+    \end{multicols}
 \end{frame}
 
 \section{Einleitung}
@@ -359,5 +362,70 @@
                     
                     \end{figure}
         \end{frame}
+        
+        \subsection{Konvertierungslogik}
+        \begin{frame}{Konvertierung der Datentypen}
+           %Beispiel für das Übertragen der SQL- nach .NET-Datentyp:
+           
+                \begin{table}
+                    
+                        
+                        \resizebox{11cm}{!}{
+                        %\begin{flushleft}
+                            \begin{tabular}{l|l|l|l}
+                                TABLE\_NAME & DATA\_TYPE & IS\_NULLABLE  & COLUMN\_NAME  \\
+                                AuftragDimension & uniqueidentifier & NO  & OID  \\
+                                AuftragDimension & varchar & YES  & Status  \\
+                                AuftragDimension & datetime & YES  & sys\_created  \\
+                                
+                            \end{tabular}
+                        %    \end{flushleft}
+                        }
+                    
+                    
+            \end{table}%\space\newline\space\newline
+            \begin{center}
+                \includegraphics[height=0.7cm, width=0.7cm]{pfeilUnten.png}
+            \end{center}
+            
+                public Guid OID \{ get; set; \}\newline  
+                public string Status \{ get; set; \}\newline
+                public DateTime? sys\_created \{ get; set; \}\newline\newline
+            
+        \end{frame}
+        
+        \subsection{Command-Generator-Klassen}
+        \begin{frame}{Klassendiagramm (1)}
+        
+        
+            \begin{figure}[htp]
+                   \includegraphics[scale=0.695]{UML-Klasse.png}
+                    
+                    \end{figure}
+        \end{frame}
+        
+        \begin{frame}{Klassendiagramm (2)}
+        
+        
+            \begin{figure}[htp]
+                   \includegraphics[scale=0.17]{UML-Klasse_crop.png}
+                    
+                    \end{figure}
+        \end{frame}
+        
+\section{Implementierung}
+    \subsection{Grafische Benutzeroberfläche}
+        \begin{frame}{Query-Tracing (1)}
+            \begin{figure}[htp]
+                \includegraphics[scale=0.5]{gui.png}
+            \end{figure}
+        \end{frame}
+        
+        \begin{frame}{Query-Tracing (2)}
+            \begin{figure}[htp]
+                \includegraphics[scale=0.4]{gui_crop.png}
+            \end{figure}
+        \end{frame}
+
 
 \end{document}
