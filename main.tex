@@ -4,6 +4,7 @@
 \usepackage{nameref}
 \usepackage[official]{eurosym}
 \usepackage{multicol}
+\usepackage[export]{adjustbox}
 
 \usetheme{Warsaw}
 \usecolortheme{seahorse}
@@ -396,7 +397,7 @@
         
         \subsection{Command-Generator-Klassen}
         \begin{frame}{Klassendiagramm (1)}
-        
+        Auf Basis der hier dargestellten Klassen und Beziehungen können Anfragen an den Command-Generator gesendet werden:
         
             \begin{figure}[htp]
                    \includegraphics[scale=0.695]{UML-Klasse.png}
@@ -416,6 +417,7 @@
 \section{Implementierung}
     \subsection{Grafische Benutzeroberfläche}
         \begin{frame}{Query-Tracing (1)}
+        Die farbliche Hervorhebung erfolgt durch RegEx, die Buttons sind durch das Anwendungsfalldiagramm festgelegt:
             \begin{figure}[htp]
                 \includegraphics[scale=0.5]{gui.png}
             \end{figure}
@@ -426,6 +428,84 @@
                 \includegraphics[scale=0.4]{gui_crop.png}
             \end{figure}
         \end{frame}
+        
+    \subsection{Command-Generator}
+        \begin{frame}{Datentyp-Konvertierung}
+        Objekte dieser Klasse stehen für je eine Tabelle:
+            \begin{figure}[htp]
+                \includegraphics[scale=0.36]{dotNetModel.PNG}
+            \end{figure}
+        \end{frame}
+        
+        \begin{frame}{Automatisches Erstellen von Queries (1)}
+            Beispiel für das Erstellen von Queries. Die nötigen Information werden dem Objekt \glqq queryRequest\grqq{} entnommen:
+            \begin{figure}[htp]
+                \includegraphics[scale=0.37,left]{insert0.PNG}
+            \end{figure}
+        \end{frame}
+        
+        \begin{frame}{Automatisches Erstellen von Queries (2)}
+            %Beispiel für Insert-Queries:
+            \begin{figure}[htp]
+                \includegraphics[scale=0.36,left]{insert_crop.PNG}
+            \end{figure}
+        \end{frame}
+        
+\section{Übergabe}
+    \subsection{Qualitätssicherung}
+        \begin{frame}{Sequenzdiagramm (1)}
+            \begin{figure}[htp]
+                    \includegraphics[scale=0.12]{Einfaches Sequenzdiagramm_2.png}
+                \end{figure}
+        \end{frame}
+        
+        \begin{frame}{Sequenzdiagramm (2)}
+            Vor der Entscheidung über das Mergen haben Product Owner und Datenbankexpertin die Möglichkeit im Vieraugengespräch das Projekt zu bewerten:
+            \begin{figure}[htp]
+                    \includegraphics[scale=0.12]{Einfaches Sequenzdiagramm_2_crop.png}
+                \end{figure}
+        \end{frame}
 
+    \subsection{Dokumentation}
+        \begin{frame}{Code-Ansicht}
+            \begin{figure}[htp]
+                    \includegraphics[scale=0.3]{doku1.PNG}
+                \end{figure}
+        \end{frame}
+        
+        \begin{frame}{Confluence-Ansicht}
+            \begin{figure}[htp]
+                    \includegraphics[scale=0.3]{doku2.PNG}
+                \end{figure}
+        \end{frame}
+\section{Fazit}
+    \subsection{Bewertung des Projekts}
+        \begin{frame}{Abschließende Überlegungen}
+            Folgende Punkte konnten erreicht werden:
+                \begin{itemize}
+                    \item Es erfolgt eine zuverlässige Rückmeldung über gesendete Queries.
+                    \item Das Programm hält Queries zurück, wenn erwünscht.
+                    \item Für jede Tabelle sind nun Table-Models vorhanden, welche für den Command-Generator verwendet werden können.
+                \end{itemize}
+            Folgende Punkte blieben hinter den Erwartungen zurück:
+                \begin{itemize}
+                    \item Der Command-Generator lässt sich nicht auf alle Datenbankbereiche anwenden.
+                    \item Komfort beim Verwenden des Simulationsmodus verbesserungswürdig.
+                \end{itemize}
+            
+    \end{frame}
+    
+    \subsection{Ausblick}
+        \begin{frame}{Möglichkeiten für zukünftige Projekte}
+            Technische Weiterentwicklungsmöglichkeiten
+                 \begin{itemize}
+                     \item Desktop-Frontend in Web-Frontend überführen.
+                     \item Konsequent \glqq Separation of concerns\grqq{} umsetzen.
+                 \end{itemize}
+            Unternehmerische Weiterentwicklungsmöglichkeiten
+                 \begin{itemize}
+                     \item 
+                 \end{itemize}
+        \end{frame}
 
 \end{document}
