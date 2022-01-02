@@ -6,15 +6,23 @@
 \usepackage{multicol}
 \usepackage[export]{adjustbox}
 
-\usetheme{Warsaw}
+%\usetheme{Warsaw}             Berlin und Copenhagen Darmstadt Dresden
+\usetheme{Dresden}
 \usecolortheme{seahorse}
+%\setbeamerfont{title}{size=\big}
+
+
+
+
+
+
 
 
 
 \title{Entwicklung eines Moduls zur Umstellung von direkten Datenbankzugriffen zu einer gekapselten Datenbankkommunikation mit optionaler Simulationsmöglichkeit}
 \author{Frank Loleit}
 \institute{Fachinformatiker (Anwendungsentwicklung)}
-\titlegraphic{\includegraphics[scale=0.2]{argusLogo.png}}
+\titlegraphic{\includegraphics[scale=0.19]{argusLogo.png}}
 \date{\today}
 
 
@@ -69,6 +77,7 @@
 \section{Einleitung}
     \subsection{Herangehensweise}
         \begin{frame}{Ausgangsüberlegung}
+        %Maßstab, an dem sich das gesamte Projekt messen soll:
             \begin{block}{Customer Obsession}
                     Wirtschaftsphilosophie, die den Kunden als Maßstab für alle Überlegungen
                     des ökonomischen Denkens und Handels emporhebt. Gemäß dieses Ansatzes gibt es keine den Wünschen des Kunden übergeordneten Maxime.
@@ -95,7 +104,7 @@
             \begin{figure}[htp]
                 \centering
                 \includegraphics[scale=0.23]{ArgusProfil.png}
-                \caption{Portfolio}
+                %\caption{Portfolio}
             \end{figure}
         \end{frame} 
         
@@ -103,7 +112,7 @@
             Argus existiert seit über 125 Jahren. Die Ausrichtung der Arbeit auf Datenbanken und Softwareprodukten begann vor rund 25 Jahren:
             \begin{figure}[htp]
                 \includegraphics[width=\textwidth]{argusGeschichte.png}
-                \caption{Geschichte}
+                %\caption{Geschichte}
             \end{figure}
         \end{frame}   
         
@@ -113,7 +122,7 @@
                 \begin{figure}[htp]
                                 \centering
                                 \includegraphics[scale=0.4]{arche.png}
-                                \caption{Startbildschirm}
+                                %\caption{Startbildschirm}
                                 \label{fig:my_label}
                             \end{figure}
                 \column{0.5\textwidth}
@@ -136,7 +145,7 @@
             \begin{figure}[htp]
                 \centering
                 \includegraphics[scale=0.35]{archeChaos.PNG}
-                \caption{Legacy-Code}
+                %\caption{Legacy-Code}
             \end{figure}
         \end{frame}    
 
@@ -241,7 +250,7 @@
 			%\hline
 
 		\end{tabular}
-		\caption{Zeitplan}
+		%\caption{Zeitplan}
 \end{table}	
     \end{frame}     
     
@@ -273,7 +282,7 @@
 	
 		
 			\end{tabular}
-			\caption{IDE Scoring}
+			%\caption{IDE Scoring}
 			\end{table}
     \end{frame}
 
@@ -302,7 +311,7 @@
 		\hline
 		\end{tabular}
 		}
-		\caption{Personalkosten}
+		%\caption{Personalkosten}
 		\end{table}
 	
     \end{frame}
@@ -326,7 +335,7 @@
 		\hline
 		
 			\end{tabular}}
-			\caption{Projektkosten Details}
+			%\caption{Projektkosten Details}
 			\end{table}
     \end{frame}
             
@@ -349,9 +358,9 @@
 \section{Entwurfsphase}
     \subsection{Query-Tracing}
         \begin{frame}{Anwendungsfall (1)}
-        Dieses Diagram soll auch die Basis für die GUI bilden:
+        Dieses Diagramm bildet auch die Basis für die GUI:
             \begin{figure}[htp]
-                   \includegraphics[scale=0.7]{Anwendungsfalldiagramm_2.png}
+                   \includegraphics[scale=0.67]{Anwendungsfalldiagramm_2.png}
                     
                     \end{figure}
         \end{frame}
@@ -359,7 +368,7 @@
         \begin{frame}{Anwendungsfall (2)}
         
             \begin{figure}[htp]
-                   \includegraphics[scale=0.3]{Anwendungsfalldiagramm_2_Crop.png}
+                   \includegraphics[scale=0.27]{Anwendungsfalldiagramm_2_Crop.png}
                     
                     \end{figure}
         \end{frame}
@@ -409,7 +418,7 @@
         
         
             \begin{figure}[htp]
-                   \includegraphics[scale=0.17]{UML-Klasse_crop.png}
+                   \includegraphics[scale=0.15]{UML-Klasse_crop.png}
                     
                     \end{figure}
         \end{frame}
@@ -419,13 +428,13 @@
         \begin{frame}{Query-Tracing (1)}
         Die farbliche Hervorhebung erfolgt durch RegEx, die Buttons sind durch das Anwendungsfalldiagramm festgelegt:
             \begin{figure}[htp]
-                \includegraphics[scale=0.5]{gui.png}
+                \includegraphics[scale=0.45]{gui.png}
             \end{figure}
         \end{frame}
         
         \begin{frame}{Query-Tracing (2)}
             \begin{figure}[htp]
-                \includegraphics[scale=0.4]{gui_crop.png}
+                \includegraphics[scale=0.38]{gui_crop.png}
             \end{figure}
         \end{frame}
         
@@ -447,7 +456,7 @@
         \begin{frame}{Automatisches Erstellen von Queries (2)}
             %Beispiel für Insert-Queries:
             \begin{figure}[htp]
-                \includegraphics[scale=0.36,left]{insert_crop.PNG}
+                \includegraphics[scale=0.35,left]{insert_crop.PNG}
             \end{figure}
         \end{frame}
         
@@ -460,7 +469,7 @@
         \end{frame}
         
         \begin{frame}{Sequenzdiagramm (2)}
-            Vor der Entscheidung über das Mergen haben Product Owner und Datenbankexpertin die Möglichkeit im Vieraugengespräch das Projekt zu bewerten:
+            Vor der Entscheidung über das Mergen haben Product Owner und Datenbankexpertin die Möglichkeit, im Vieraugengespräch das Projekt zu bewerten:
             \begin{figure}[htp]
                     \includegraphics[scale=0.12]{Einfaches Sequenzdiagramm_2_crop.png}
                 \end{figure}
@@ -481,7 +490,7 @@
 \section{Fazit}
     \subsection{Bewertung des Projekts}
         \begin{frame}{Abschließende Überlegungen}
-            Folgende Punkte konnten erreicht werden:
+            Folgende Punkte konnten umgesetzt werden:
                 \begin{itemize}
                     \item Es erfolgt eine zuverlässige Rückmeldung über gesendete Queries.
                     \item Das Programm hält Queries zurück, wenn erwünscht.
@@ -497,14 +506,16 @@
     
     \subsection{Ausblick}
         \begin{frame}{Möglichkeiten für zukünftige Projekte}
-            Technische Weiterentwicklungsmöglichkeiten
+            Technische Weiterentwicklungsmöglichkeiten:
                  \begin{itemize}
                      \item Desktop-Frontend in Web-Frontend überführen.
                      \item Konsequent \glqq Separation of concerns\grqq{} umsetzen.
                  \end{itemize}
-            Unternehmerische Weiterentwicklungsmöglichkeiten
+            Unternehmerische Weiterentwicklungsmöglichkeiten:
                  \begin{itemize}
-                     \item 
+                     \item Bessere Verknüpfung der Datenbank- und Entwicklungsabteilung.
+                     \item Stärkeren Fokus auf das Anwerben neuer Entwickler:innen.
+                     \item Fördern der Kommunikation zwischen Product Owner und Entwicklerteam.
                  \end{itemize}
         \end{frame}
 
